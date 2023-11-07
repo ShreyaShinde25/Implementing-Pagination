@@ -1,3 +1,4 @@
+<ng-container *ngIf="(usersState$ | async) as state" [ngSwitch]="state.appState">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -18,8 +19,11 @@
   </div>
 </nav>
 <div class="container">
+  <!-- {{usersState$ | async | json}} -->
+  <!-- subscribing to the observable -->
   <div class="row">
       <div class="col-md-12 mt-3">
+        <ng-container *ngSwitchCase="'APP_ERROR'">{{ state.error | json}}</ng-container>
           <h3>User List</h3>
           <table class="table table-striped">
               <thead>
@@ -35,18 +39,18 @@
                   <th scope="row">1</th>
                   <td>Mark</td>
                   <td>Otto</td>
-                  <td>@mdo</td>
+                  <td>mdo</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
                   <td>Jacob</td>
                   <td>Thornton</td>
-                  <td>@fat</td>
+                  <td>fat</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
                   <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
+                  <td>twitter</td>
                 </tr>
               </tbody>
             </table>
@@ -71,4 +75,4 @@
       </div>
   </div>
 </div>
-<router-outlet></router-outlet>
+</ng-container>
