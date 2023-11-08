@@ -5,5 +5,5 @@ export interface User{
     status:string;
     address:string;
     phone:string;
-    imgaeUrl:string;
+    imageUrl:string;
 }

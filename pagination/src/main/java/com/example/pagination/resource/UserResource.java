@@ -28,7 +28,9 @@ public class UserResource {
 
 
     @GetMapping("/users")
-    public ResponseEntity<HttpResponse>getUsers(@RequestParam Optional<String> name, @RequestParam Optional<Integer> page, @RequestParam Optional<Integer> size){
+    public ResponseEntity<HttpResponse>getUsers(@RequestParam Optional<String> name, @RequestParam Optional<Integer> page, @RequestParam Optional<Integer> size) throws InterruptedException {
+//        TimeUnit.SECONDS.sleep(3);
+//        throw new RuntimeException("Forced exception for testing");
         return ResponseEntity.ok().body(
                 HttpResponse.builder()
                         .timeStamp(now().toString())
