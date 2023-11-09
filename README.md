@@ -4,7 +4,7 @@ This repository demonstrates the implementation of pagination using Angular on t
 ## Features
 * **Dynamic adjustment of pages:** For example, Displays 10 entities per page from a dataset of 100 users, spanning across 10 pages. Changing the display size to 20 entries per page will dynamically reconfigure the pagination to 5 pages.
 * **Disabled navigation buttons:** When the cursor is on the first page, the "previous" button is disabled. Similarly, if the cursor is on the last page, the "next" button is disabled.
-* Search Functionality: Allows users to search for specific users by name across different pages. Fetches and displays search results efficiently within the pagination structure. 
+* **Search Functionality:** Allows users to search for specific users by name across different pages. Fetches and displays search results efficiently within the pagination structure. 
 
 ## Implementation
 **Frontend** (*Angular*)
